@@ -1,0 +1,19 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+	<display-name>Heroku JAX-RS</display-name>
+	<servlet>
+		<servlet-name>JAX-RS</servlet-name>
+		<servlet-class>org.glassfish.jersey.servlet.ServletContainer</servlet-class>
+		<init-param>
+			<param-name>javax.ws.rs.Application</param-name>
+			<param-value>com.example.ResourceConfig</param-value>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>JAX-RS</servlet-name>
+		<url-pattern>/jax-rs/*</url-pattern>
+	</servlet-mapping>
+</web-app>
